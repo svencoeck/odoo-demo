@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="odoo_moon.spaceship_window_action">
+            <field name="name">Space Ships</field>
+            <field name="res_model">moon.spaceship</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No data yet!
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="odoo_moon.crew_window_action">
+            <field name="name">Crew Members</field>
+            <field name="res_model">moon.crew_member</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No data yet!
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Odoo Moon" id="menu_odoo_moon" />
+
+        <menuitem name="Asset Management" id="menu_odoo_moon_assets" parent="menu_odoo_moon" />
+
+        <menuitem name="Space Ships" id="menu_odoo_moon_spaceships" parent="menu_odoo_moon_assets"
+                  action="odoo_moon.spaceship_window_action" />
+
+        <menuitem name="Crew Members" id="menu_odoo_moon_crew" parent="menu_odoo_moon_assets"
+                  action="odoo_moon.crew_window_action" />
+
+    </data>
+</odoo>

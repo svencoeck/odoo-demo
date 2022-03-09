@@ -15,7 +15,8 @@
     'depends': ['base'],
     'data': [
         'security/odoo_moon.xml',
-        'security/ir.model.access.csv'
+        'security/ir.model.access.csv',
+        'views/views.xml'
     ],
     'demo': [
         'demo/spaceship_demo.xml'

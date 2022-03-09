@@ -2,3 +2,6 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 odoo_moon.admin_access_moon_spaceship,Admin Access To Spaceship,odoo_moon.model_moon_spaceship,odoo_moon_admin_group,1,1,1,1
 odoo_moon.crew_access_moon_spaceship,Crew Access To Spaceship,odoo_moon.model_moon_spaceship,odoo_moon_crew_group,1,1,1,0
 odoo_moon.general_access_moon_spaceship,General Access To Spaceship,odoo_moon.model_moon_spaceship,,1,0,0,0
+odoo_moon.admin_access_moon_crew_member,Admin Access To Crew Member,odoo_moon.model_moon_crew_member,odoo_moon_admin_group,1,1,1,1
+odoo_moon.crew_access_moon_crew_member,Crew Access To Crew Member,odoo_moon.model_moon_crew_member,odoo_moon_crew_group,1,1,1,0
+odoo_moon.general_access_moon_crew_member,General Access To Crew Member,odoo_moon.model_moon_spaceship,,1,0,0,0
