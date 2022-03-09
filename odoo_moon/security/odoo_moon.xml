@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="odoo_moon_admin_group" model="res.groups">
+        <field name="name">Odoo Moon / Admin Group</field>
+    </record>
+    <record id="odoo_moon_crew_group" model="res.groups">
+        <field name="name">Odoo Moon / Space Crew Group</field>
+    </record>
+</odoo>

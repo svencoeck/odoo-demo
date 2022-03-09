@@ -13,7 +13,10 @@
     'website': 'https://evato.be',
     'category': 'Space Travel',
     'depends': ['base'],
-    'data': [],
+    'data': [
+        'security/odoo_moon.xml',
+        'security/ir.model.access.csv'
+    ],
     'demo': [
         'demo/spaceship_demo.xml'
     ],
