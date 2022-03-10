@@ -18,3 +18,6 @@ class Spaceship(models.Model):
     passengers = fields.Integer(string='Number of passengers')
 
     active = fields.Boolean(string='Active', default=True)
+
+    notes = fields.Text(string='Notes')
+

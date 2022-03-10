@@ -2,6 +2,59 @@
 <odoo>
     <data>
 
+        <record model="ir.ui.view" id="spaceship_view_form">
+            <field name="name">oodo_moon.spaceship.form</field>
+            <field name="model">moon.spaceship</field>
+            <field name="arch" type="xml">
+                <form string="Space Ship Form">
+                    <sheet>
+                        <h1><field name="name" /></h1>
+                        <group>
+                            <field name="active" />
+                        </group>
+
+                        <notebook>
+                            <page string="Technical">
+                                <group>
+                                    <field name="ship_type" />
+                                    <field name="fuel_type" />
+                                    <field name="passengers" />
+                                </group>
+                            </page>
+                            <page string="Notes">
+                                <field name="notes" />
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="odoo_moon_spaceship_view_tree">
+            <field name="name">odoo_moon.spaceship.tree</field>
+            <field name="model">moon.spaceship</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="ship_type" optional="hide" />
+                    <field name="fuel_type" optional="show" />
+                    <field name="passengers" optional="show" />
+                    <field name="notes" optional="hide" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="odoo_moon_spaceship_view_search">
+            <field name="name">odoo_moon.spaceship.search</field>
+            <field name="model">moon.spaceship</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" />
+                    <field name="notes" />
+                </search>
+            </field>
+        </record>
+
         <record model="ir.actions.act_window" id="odoo_moon.spaceship_window_action">
             <field name="name">Space Ships</field>
             <field name="res_model">moon.spaceship</field>
