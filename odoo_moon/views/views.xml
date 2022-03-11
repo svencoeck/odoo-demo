@@ -10,7 +10,14 @@
                     <sheet>
                         <h1><field name="name" /></h1>
                         <group>
-                            <field name="active" />
+                            <group>
+                                <field name="active" />
+                            </group>
+                            <group>
+                                <field name="fuel_cost" />
+                                <field name="maintenance_cost" />
+                                <field name="total_cost" force_save="1" />
+                            </group>
                         </group>
 
                         <notebook>
