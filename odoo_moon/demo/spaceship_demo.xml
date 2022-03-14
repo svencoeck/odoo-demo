@@ -6,6 +6,8 @@
             <field name="ship_type">99999</field>
             <field name="fuel_type">electric</field>
             <field name="passengers">20</field>
+            <field name="fuel_cost">20</field>
+            <field name="maintenance_cost">50</field>
             <field name="active">True</field>
         </record>
         <record model="moon.spaceship" id="x0002">
@@ -13,6 +15,8 @@
             <field name="ship_type">88888</field>
             <field name="fuel_type">nuclear</field>
             <field name="passengers">50</field>
+            <field name="fuel_cost">25</field>
+            <field name="maintenance_cost">20</field>
             <field name="active">True</field>
         </record>
         <record model="moon.spaceship" id="x0003">
@@ -20,6 +24,8 @@
             <field name="ship_type">7777</field>
             <field name="fuel_type">nuclear</field>
             <field name="passengers">100</field>
+            <field name="fuel_cost">35</field>
+            <field name="maintenance_cost">60</field>
             <field name="active">False</field>
         </record>
     </data>
