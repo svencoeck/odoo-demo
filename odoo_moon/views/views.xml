@@ -84,6 +84,17 @@
             </field>
         </record>
 
+        <record model="ir.actions.act_window" id="odoo_moon.mission_window_action">
+            <field name="name">Mission</field>
+            <field name="res_model">moon.mission</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No data yet!
+                </p>
+            </field>
+        </record>
+
         <menuitem name="Odoo Moon" id="menu_odoo_moon" />
 
         <menuitem name="Asset Management" id="menu_odoo_moon_assets" parent="menu_odoo_moon" />
@@ -93,6 +104,9 @@
 
         <menuitem name="Crew Members" id="menu_odoo_moon_crew" parent="menu_odoo_moon_assets"
                   action="odoo_moon.crew_window_action" />
+
+        <menuitem name="Missions" id="menu_odoo_moon_missions" parent="menu_odoo_moon"
+                  action="odoo_moon.mission_window_action" />
 
     </data>
 </odoo>
