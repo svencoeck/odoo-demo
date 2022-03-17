@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="odoo_moon_sale_order_wizard_view">
+            <field name="name">odoo_moon.sale.order.wizard.view</field>
+            <field name="model">moon.sale.order.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Create orders for passengers">
+                    <group>
+                        <field name="mission_id" />
+                        <field name="passenger_ids" />
+                    </group>
+                    <footer>
+                        <button name="create_orders" type="object"
+                                string="Create orders" class="oe_highlight" />
+                        or
+                        <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="odoo_moon_sale_order_wizard_view_action" model="ir.actions.act_window">
+            <field name="name">Bill passengers</field>
+            <field name="res_model">moon.sale.order.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="odoo_moon_sale_order_wizard_view" />
+            <field name="binding_model_id" ref="odoo_moon.model_moon_mission" />
+            <field name="binding_view_types">form</field>
+            <field name="target">new</field>
+            <field name="context">{'default_mission_id': active_id}</field>
+        </record>
+
+    </data>
+</odoo>

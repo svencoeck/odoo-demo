@@ -8,3 +8,4 @@ odoo_moon.general_access_moon_crew_member,General Access To Crew Member,odoo_moo
 odoo_moon.admin_access_moon_mission,Admin Access To Missions,odoo_moon.model_moon_mission,odoo_moon_admin_group,1,1,1,1
 odoo_moon.crew_access_moon_mission,Crew Access To Missions,odoo_moon.model_moon_mission,odoo_moon_crew_group,1,1,1,0
 odoo_moon.general_access_moon_mission,General Access To Missions,odoo_moon.model_moon_mission,,1,0,0,0
+odoo_moon.odoo_moon_sale_order_wizard,odoo_moon_sale_order_wizard,odoo_moon.model_moon_sale_order_wizard,odoo_moon_admin_group,1,1,1,0

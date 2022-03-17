@@ -12,11 +12,13 @@
     'author': 'Evato BV',
     'website': 'https://evato.be',
     'category': 'Space Travel',
-    'depends': ['base'],
+    'depends': ['sale'],
     'data': [
         'security/odoo_moon.xml',
         'security/ir.model.access.csv',
-        'views/views.xml'
+        'views/views.xml',
+        'views/sale_order_inherit.xml',
+        'wizard/sale_order_wizard.xml',
     ],
     'demo': [
         'demo/spaceship_demo.xml'
