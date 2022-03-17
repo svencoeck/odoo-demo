@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <template id="mission_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                            <div class="page">
+                                <h2>Mission Report</h2>
+
+                                <div class="row mt32 mb32">
+                                    <div class="col-3">
+                                        <strong>Name:</strong>
+                                        <p t-field="o.name"/>
+                                    </div>
+                                    <div class="col-3">
+                                        <strong>Fuel type:</strong>
+                                        <p t-field="o.spaceship_id.fuel_type"/>
+                                    </div>
+                                    <div class="col-3">
+                                        <strong>Passengers:</strong>
+                                        <p t-field="o.spaceship_id.passengers"/>
+                                    </div>
+                                    <div class="col-3">
+                                        <strong>Total Cost:</strong>
+                                        <p t-field="o.spaceship_id.total_cost"/>
+                                    </div>
+                                </div>
+
+                                <h3>Crew</h3>
+                                <table class="table table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Function</th>
+                                            <th>Day of birth</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr t-foreach="o.crew" t-as="crew_member">
+                                            <td><span t-field="crew_member.name"/></td>
+                                            <td>
+                                                <span t-field="crew_member.function"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="crew_member.day_of_birth"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <record id="odoo_moon_mission_report" model="ir.actions.report">
+            <field name="name">Mission report</field>
+            <field name="model">moon.mission</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">odoo_moon.mission_report</field>
+            <field name="report_file">odoo_moon.mission_report</field>
+            <field name="print_report_name">'mission-report-%s' % object.name</field>
+            <field name="attachment">'mission-report-' +  object.name + '.pdf'</field>
+            <field name="binding_model_id" ref="model_moon_mission"/>
+            <field name="binding_type">report</field>
+        </record>
+
+    </data>
+</odoo>

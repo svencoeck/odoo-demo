@@ -17,6 +17,7 @@
         'security/odoo_moon.xml',
         'security/ir.model.access.csv',
         'views/views.xml',
+        'views/mission_reports.xml',
         'views/sale_order_inherit.xml',
         'wizard/sale_order_wizard.xml',
     ],
